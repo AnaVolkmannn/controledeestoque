@@ -1,0 +1,73 @@
+.container {
+  max-width: 900px;
+  margin: 1rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.titulo {
+  line-height: 60px;
+  margin-bottom: 1rem;
+  font-size: 60px;
+  width: 500px;
+  font-weight: bold;
+  color: #53281C;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 50%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+.fileInput {
+  padding: 0.3rem 0;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.checkbox {
+  transform: scale(1.2);
+}
+
+.submitBtn {
+  background-color: #00B4B2;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  background-color: #00807d;
+}

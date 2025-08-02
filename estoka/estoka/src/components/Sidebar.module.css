@@ -1,0 +1,43 @@
+.sidebar {
+  background-color: #00B4B2;
+  color: white;
+  height: 100vh;
+  width: 220px;
+  transition: width 0.3s ease;
+  padding: 1rem;
+  position: relative;
+}
+
+.collapsed {
+  width: 50px;
+  overflow: hidden;
+}
+
+.toggle,
+.hide {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0.5rem 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
