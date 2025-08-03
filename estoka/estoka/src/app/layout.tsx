@@ -17,7 +17,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <body className={gabarito.className}>
         <div style={{ display: 'flex', minHeight: '100vh' }}>
-          <Sidebar />
           <main style={{ flex: 1, padding: '2rem' }}>
             {children}
           </main>
