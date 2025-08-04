@@ -14,7 +14,7 @@ export default function Home() {
       <div className={`${showLogin || showCriarConta ? "blur-sm" : ""} transition-all duration-300`}>
         {/* Cabeçalho */}
         <header className="relative top-3 left-6">
-          <img src="estoka-cabecalhov2.png" alt="Cabeçalho Estoka" className="w-60" />
+          <img src="estoka-cabecalho.png" alt="Cabeçalho Estoka" className="w-60" />
           <div className="absolute top-3 right-25 flex gap-3">
             <button
               onClick={() => setShowCriarConta(true)}
@@ -57,8 +57,7 @@ export default function Home() {
         </main>
 
         {/* Rodapé */}
-        <footer className="bg-teal-500 text-center py-3 text-gray-100">
-          <p>© 2025 Estoka</p>
+        <footer className="bg-teal-500 text-center mt-10 py-8 text-gray-100">
         </footer>
       </div>
 
