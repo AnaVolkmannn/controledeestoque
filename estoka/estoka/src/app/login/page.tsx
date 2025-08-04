@@ -24,7 +24,7 @@ export default function Home() {
               <p className="text-gray-950">Se você procura um controle de estoque online que organiza os produtos, registra movimentações, emite relatórios e facilita a gestão em tempo real...</p>
               <p className="text-gray-950 mt-5">Conte com a gente!</p>
               <div className="absolute flex mt-4">
-                <button className="bg-teal-500 px-4 py-3 text-2xl text-white rounded-2xl mt-4 hover:bg-teal-600 transition">Começar a usar</button>
+                <button className="bg-teal-500 text-2xl text-white px-4 py-2 rounded hover:bg-teal-600 transition">Começar a usar</button>
               </div>
             </div>
 
