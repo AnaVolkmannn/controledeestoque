@@ -1,10 +1,19 @@
 "use client";
 
+import CriarConta from "./criarconta";
+import { useState } from "react";
+
 interface EntrarProps {
   onClose: () => void;
 }
 
 export default function Entrar({ onClose }: EntrarProps) {
+  const [mostrarCriarConta, setMostrarCriarConta] = useState(false);
+
+  if (mostrarCriarConta) {
+    return <CriarConta onClose={onClose} />;
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div
@@ -12,8 +21,6 @@ export default function Entrar({ onClose }: EntrarProps) {
         onClick={onClose}
       ></div>
 
-      {/* Modal */}
-      {/* Botão de fechar*/}
       <div className="relative bg-white rounded-lg p-8 w-full max-w-md shadow-lg z-10">
         <button
           onClick={onClose}
@@ -22,18 +29,16 @@ export default function Entrar({ onClose }: EntrarProps) {
           &times;
         </button>
 
-      {/* Logo estoka*/}
-        <img src="estoka-cabecalho.png" alt="Cabeçalho Estoka" className="w-60" />
-      
-      {/* Texto e imagem*/}
-        <div className="flex">
-          <div>
-              <img src="entrar.png" alt="Imagem tela de entrada" className="w-170" />
-            </div>
-          <h2 className="text-4xl font-extrabold mb-4 text-center text-orange-950">Bem vindo de volta!</h2>
+        <img src="estoka-cabecalho.png" alt="Cabeçalho Estoka" className="w-60 mx-auto" />
+
+        <div className="flex justify-center my-4">
+          <img src="img-criarconta.png" alt="Imagem tela de entrada" className="w-32" />
         </div>
 
-      {/* Formulário*/}
+        <h2 className="text-3xl font-extrabold mb-6 text-center text-orange-950">
+          Entrar na sua conta
+        </h2>
+
         <form className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -63,6 +68,15 @@ export default function Entrar({ onClose }: EntrarProps) {
           </button>
         </form>
 
+        <div className="flex justify-center pt-3">
+          <p className="pr-1">Não tem uma conta?</p>
+          <button
+            onClick={() => setMostrarCriarConta(true)}
+            className="text-teal-600 underline hover:text-teal-800"
+          >
+            Criar conta
+          </button>
+        </div>
       </div>
     </div>
   );
