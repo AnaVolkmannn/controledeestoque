@@ -23,7 +23,7 @@ export default function Entrar({ onClose }: EntrarProps) {
       ></div>
 
       {/* Conteúdo do popup */}
-      <div className="relative z-10 bg-white rounded-lg p-6 shadow-lg max-w-4xl w-full">
+      <div className="relative z-10 bg-white rounded-lg p-8 pt-10 max-w-4xl w-full shadow-2xl shadow-teal-700"> 
         {/* Botão de fechar */}
         <button
           onClick={onClose}
@@ -33,14 +33,14 @@ export default function Entrar({ onClose }: EntrarProps) {
         </button>
 
         {/* Logo no topo esquerdo */}
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-5 left-15">
           <img src="estoka-cabecalho.png" alt="Estoka Logo" className="w-40" />
         </div>
 
         {/* Corpo do modal com imagem e formulário lado a lado */}
-        <div className="mt-20 flex gap-8">
+        <div className="flex gap-8">
           {/* Imagem abaixo do logo */}
-          <div className="w-1/2 flex justify-center items-start">
+          <div className="pt-18 mt-w-1/2 flex justify-center items-start">
             <img
               src="entrar.png"
               alt="Imagem de entrada"
@@ -49,11 +49,11 @@ export default function Entrar({ onClose }: EntrarProps) {
           </div>
 
           {/* Formulário */}
-          <div className="w-1/2">
-            <h2 className="text-3xl font-extrabold text-orange-950 mb-6">
-              Entrar na sua conta
+          <div className="w-1x2">
+            <h2 className="text-5xl font-extrabold text-orange-950 mb-2">
+              Bem vindo de volta!
             </h2>
-            <form className="space-y-4">
+            <form className="space-y-4 pr-10">
               <div>
                 <label
                   htmlFor="email"
@@ -89,12 +89,10 @@ export default function Entrar({ onClose }: EntrarProps) {
             </form>
 
             {/* Link para criar conta */}
-            <div className="flex pt-3 text-sm">
+            <div className="flex justify-center pt-3 text-sm pb-10 pr-10">
               <p className="pr-1">Ainda não tem conta?</p>
               <button
                 onClick={() => setMostrarCriarConta(true)}
-                  // Aqui você chama a função que abre o popup de criar conta
-                  // Pode ser passado via props se necessário
                 className="text-teal-600 no-underline hover:underline"
               >
                 Criar conta
