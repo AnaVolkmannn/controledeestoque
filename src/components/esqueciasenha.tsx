@@ -1,19 +1,18 @@
 "use client";
 
-import CriarConta from "./criarconta";
-import EsqueciSenha from "./esqueciasenha"
+import Entrar from "./entrar";
 import { useState } from "react";
 
 interface EntrarProps {
   onClose: () => void;
 }
 
-export default function Entrar({ onClose }: EntrarProps) {
-  const [mostrarCriarConta, setMostrarCriarConta] = useState(false);
+export default function EsqueciSenha({ onClose }: EntrarProps) {
+  const [mostrarEntrar, setMostrarEntrar] = useState(false);
   const [mostrarEsqueciaSenha, setMostrarEsqueciaSenha] = useState(false);
-
-  if (mostrarCriarConta) {
-    return <CriarConta onClose={onClose} />;
+  
+  if (mostrarEntrar) {
+    return <Entrar onClose={onClose} />;
   }
 
   if (mostrarEsqueciaSenha) {
@@ -38,17 +37,19 @@ export default function Entrar({ onClose }: EntrarProps) {
         <img src="estoka-cabecalho.png" alt="Cabeçalho Estoka" className="w-60 mx-auto" />
 
         <div className="flex justify-center my-4">
-          <img src="entrar.png" alt="Imagem tela de entrada" className="w-32" />
+          <img src="img-esqueciasenha.png" alt="Imagem tela de entrada" className="w-32" />
         </div>
 
-        <h2 className="text-3xl font-extrabold mb-6 text-center text-orange-950">
-          Entrar na sua conta
+        <h2 className="text-3xl font-extrabold mb-2 text-center text-orange-950">
+          Recuperar senha
         </h2>
+
+        <p className="text-center text-gray-500 mb-6">Insira seu endereço de email - você receberá  um link para recuperação de senha. </p>
 
         <form className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              E-mail
+              Email
             </label>
             <input
               type="email"
@@ -56,40 +57,20 @@ export default function Entrar({ onClose }: EntrarProps) {
               className="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
-          <div>
-            <label htmlFor="senha" className="block text-sm font-medium text-gray-700">
-              Senha
-            </label>
-            <input
-              type="password"
-              id="senha"
-              className="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-            />
-          </div>
           <button
             type="submit"
             className="w-full bg-teal-500 text-white py-2 rounded hover:bg-teal-600 transition"
           >
-            Entrar
+            Enviar
           </button>
         </form>
 
         <div className="flex justify-center pt-3">
-          <p className="pr-1">Não possui uma conta?</p>
           <button
-            onClick={() => setMostrarCriarConta(true)}
+            onClick={() => setMostrarEntrar(true)}
             className="text-teal-600 underline hover:text-teal-800"
           >
-            Criar
-          </button>
-        </div>
-
-        <div className="flex justify-center">
-          <button
-            onClick={() => setMostrarEsqueciaSenha(true)}
-            className="text-teal-600 underline hover:text-teal-800"
-          >
-            Esqueci minha senha
+            Voltar para tela de login
           </button>
         </div>
 
