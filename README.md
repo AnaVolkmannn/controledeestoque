@@ -1,56 +1,36 @@
-# O Estoka. é um sistema web desenvolvido para ajudar pequenos empreendedores a realizarem o seu controle de estoque. As principais funcionalidades incluem: 
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Salvar os dados registrados por meio de um usuário logado com e-mail
-Cadastrar novos produtos por fornecedor
-Realizar um novo inventário (entradas)
-Pesquisar e fazer consultas - Filtrar por mês, ano, produto...
-Gerar relatórios com estatísticas (por ex: produtos constantemente em falta)
-Exportar esses inventários em PDF~, somando todos os valores dos produtos em estoque, incluindo calculo de frete e IPI de produtos específicos (Necessidade do cliente)
+## Getting Started
 
-1. Tela de Login
-Campos: e-mail/usuário, senha
-(login com google)
-Botão: entrar
-(Opcional) Esqueci minha senha
-Validação e mensagens de erro
+First, run the development server:
 
-2. Dashboard / Tela Inicial
-Resumo geral do estoque:
-Total de produtos
-Produtos em falta ou abaixo do mínimo
-Atalhos para ações rápidas: “Cadastrar Produto”, “Registrar Inventário”, etc.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-3. Tela de Cadastro de Produtos - Produtos são relacionados a fornecedores
-Nome do produto
-Código (SKU/código de barras)
-Categoria
-Fornecedor
-Unidade de medida
-Quantidade mínima
-Preço de custo/venda
-Campo de imagem (opcional)
-Botões: ver todos os produtos, salvar, limpar
-*salvar antes de sair
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-4. Tela de Listagem de Produtos
-Tabela com:
-Nome, código, fornecedor, estoque atual, categoria, preço (frete, IPI)
-Ações: editar, excluir, ver detalhes
-Filtro/pesquisa por nome, categoria, SKU, mês entrada
-Indicador de estoque baixo (ex: em vermelho)
-Botão: exportar um relatório
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-6. Tela para gerar Relatório
-Filtro por data/mês, categoria, produto
-Gera um relatório calculando o valor em estoque somando todas as quantidades de produtos
-Exportar como PDF/Excel
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-----------------------------------------------------------
-10. Popup de Notificações/Alertas
-Lista de alertas (ex: produtos com estoque abaixo do mínimo)
-Marcar como lido, configurar notificações por e-mail
+## Learn More
 
-11. Menu de Configurações
-Definir estoque mínimo padrão
-Ativar/desativar notificações
-Sair da conta
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
