@@ -1,6 +1,7 @@
 "use client";
 
 import CriarConta from "./criarconta";
+import EsqueciSenha from "./esqueciasenha";
 import { useState } from "react";
 
 interface EntrarProps {
@@ -9,9 +10,14 @@ interface EntrarProps {
 
 export default function Entrar({ onClose }: EntrarProps) {
   const [mostrarCriarConta, setMostrarCriarConta] = useState(false);
+  const [mostrarEsqueciaSenha, setMostrarEsqueciaSenha] = useState(false);
 
   if (mostrarCriarConta) {
     return <CriarConta onClose={onClose} />;
+  }
+
+   if (mostrarEsqueciaSenha) {
+    return <EsqueciSenha onClose={onClose} />;
   }
 
   return (
@@ -89,13 +95,23 @@ export default function Entrar({ onClose }: EntrarProps) {
             </form>
 
             {/* Link para criar conta */}
-            <div className="flex justify-center pt-3 text-sm pb-10 pr-10">
+            <div className="flex justify-center pt-3 text-sm pr-10">
               <p className="pr-1">Ainda não tem conta?</p>
               <button
                 onClick={() => setMostrarCriarConta(true)}
                 className="text-teal-600 no-underline hover:underline"
               >
                 Criar conta
+              </button>
+            </div>
+
+            {/* Link para esqueci a senha */}
+            <div className="flex justify-center text-sm pb-10 pr-10">
+              <button
+                onClick={() => setMostrarEsqueciaSenha(true)}
+                className="text-teal-600 no-underline hover:underline"
+              >
+                Esqueceu a senha?
               </button>
             </div>
           </div>
