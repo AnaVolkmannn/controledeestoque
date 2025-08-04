@@ -115,12 +115,12 @@ export default function CriarConta({ onClose }: CriarContaProps) {
 
             {/* Link para criar conta */}
             <div className="flex justify-center pt-3 text-sm pb-10 pr-10">
-              <p className="pr-1">Ainda não tem conta?</p>
+              <p className="pr-1">Já tem uma conta?</p>
               <button
                 onClick={() => setMostrarEntrar(true)}
                 className="text-teal-600 no-underline hover:underline"
               >
-                Criar conta
+                Entrar
               </button>
             </div>
           </div>
