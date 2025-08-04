@@ -44,7 +44,7 @@ export default function Home() {
                 </p>
                 <p className="text-gray-950 mt-5">Conte com a gente!</p>
                 <div className="absolute flex mt-4">
-                  <button className="bg-teal-500 text-2xl text-white px-4 py-2 rounded hover:bg-teal-600 transition">
+                  <button onClick={() => setShowCriarConta(true)} className="bg-teal-500 text-2xl text-white px-4 py-2 rounded hover:bg-teal-600 transition">
                     Começar a usar
                   </button>
                 </div>

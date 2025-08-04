@@ -32,7 +32,7 @@ export default function Entrar({ onClose }: EntrarProps) {
         <img src="estoka-cabecalho.png" alt="Cabeçalho Estoka" className="w-60 mx-auto" />
 
         <div className="flex justify-center my-4">
-          <img src="img-criarconta.png" alt="Imagem tela de entrada" className="w-32" />
+          <img src="entrar.png" alt="Imagem tela de entrada" className="w-32" />
         </div>
 
         <h2 className="text-3xl font-extrabold mb-6 text-center text-orange-950">
