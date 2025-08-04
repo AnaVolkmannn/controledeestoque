@@ -46,8 +46,3 @@ body {
   flex: 1;
   padding: 2rem;
 }
-
-:root {
-  --color-primary: #00b4b2;
-  --color-secondary: #53281C;
-}

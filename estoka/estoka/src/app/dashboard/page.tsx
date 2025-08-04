@@ -1,10 +1,15 @@
-export default function Home() {
+import Sidebar from "@/components/Sidebar"
+
+export default function Dashboard() {
+
   return (
-    <div>
+    <div className="flex">
+          <Sidebar />
+
       <header>
         <h1>Estoka</h1>
       </header>
-
+      
       <main>
         <section>
           <div>
@@ -18,5 +23,6 @@ export default function Home() {
         <p>© 2025 Estoka</p>
       </footer>
     </div>
+    
   )
 }

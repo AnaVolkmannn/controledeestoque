@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./Cadastro.module.css";
+import Sidebar from "@/components/Sidebar";
 
 export default function CadastroProduto() {
   const [form, setForm] = useState({
@@ -84,6 +85,8 @@ export default function CadastroProduto() {
   };
 
   return (
+    <div className="flex">
+      <Sidebar />
     <div className={styles.container}>
       <h1 className={styles.titulo}>Cadastro de Produtos</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -226,7 +229,8 @@ export default function CadastroProduto() {
           Ver todos
         </button>
 
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
